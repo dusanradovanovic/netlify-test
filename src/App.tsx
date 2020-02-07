@@ -29,17 +29,25 @@ const App: React.FC = () => {
           </ul>
         </nav>
 
-        <Switch>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/user/:userId">
-            <Users />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
+        <div className="page-container">
+          <Switch>
+            <Route path="/about">
+              <About />
+            </Route>
+            <Route path="/user/:userId">
+              <Users />
+            </Route>
+            <Route path="/">
+              <Home />
+            </Route>
+          </Switch>
+        </div>
+
+        <div className="vars-container">
+          <code>
+            <pre>{JSON.stringify(process.env, null, 2)}</pre>
+          </code>
+        </div>
       </div>
     </Router>
   );
