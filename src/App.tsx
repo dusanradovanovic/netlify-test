@@ -8,8 +8,6 @@ import {
 } from 'react-router-dom';
 import './App.scss';
 
-import v from './env.json';
-
 const App: React.FC = () => {
   return (
     <Router>
@@ -48,9 +46,6 @@ const App: React.FC = () => {
         <div className="vars-container">
           <code>
             <pre>{JSON.stringify(process.env, null, 2)}</pre>
-          </code>
-          <code>
-            <pre>{JSON.stringify(v, null, 2)}</pre>
           </code>
         </div>
       </div>
